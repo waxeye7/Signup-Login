@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <a id="modal-bg" class="hidden" href="./login.html">
+        <div id="modal">Thank you for Signing up! Click here to Login</div>
+
+    </a>
+
+    <div id="parent" class="flex">
+        <div class="column">
+            <div id="first-name-div" class="flex">
+                <label for="first-name">First Name: </label>
+                <input class="small-margin-bottom" type="text" id="first-name" placeholder="Enter First Name">
+                <!-- <h2 class="hidden">Username Must Be 4 Characters Or More</h2> -->
+            </div>
+        
+
+            <div id="last-name-div" class="flex">
+                <label for="last-name">Last Name: </label>
+                <input class="small-margin-bottom" type="text" id="last-name" placeholder="Enter Last Name">
+                <!-- <h2 class="hidden"></h2> -->
+            </div>
+
+            <div id="username-div" class="flex">
+                <label for="username">Username: </label>
+                <input class="small-margin-bottom" type="text" id="username" placeholder="Enter Username">
+                <h2 id="username-problem" class="hidden">Username Must Be 4 Characters Or More</h2>
+            </div>
+            
+            <div id="password-div" class="flex">
+                <label for="password">Password: </label>
+                <input class="small-margin-bottom" type="password" id="password" placeholder="Enter Password">
+                <h2 id="password-problem-no-match" class="hidden">Passwords Don't Match</h2>
+                <h2 id="password-problem-too-short" class="hidden">Password Must Be 8 Characters Or More</h2>
+            </div>
+        
+            <div id="re-password-div" class="flex">
+                <label for="re-password">Password Again: </label>
+                <input class="small-margin-bottom" type="password" id="re-password" placeholder="Enter Password">
+                <h2 id="re-password-problem-no-match" class="hidden">Passwords Don't Match</h2>
+                <h2 id="re-password-problem-too-short" class="hidden">Password Must Be 8 Characters Or More</h2>
+            </div>
+
+            <div id="sign-up-button-div" class="flex">
+                <a id="sign-up-button" class="sign-up inline" href="#">Sign Up</a>
+                <h2 id="fill-all-box" class="hidden">Fill All Box</h2>
+            </div>
+            <!-- <a class="inline" href="./meow.html"><input type="submit" value="Login" id="Login_BTN"></a>     -->
+        </div>
+
+    </div>
+
+    <script src="./scriptone.js"></script>
+</body>
+</html>
