@@ -7,6 +7,13 @@ let Password_Input = document.getElementById("password");
 let Re_Password_Input = document.getElementById("re-password");
 
 Sign_Up_Button.onclick = function() {
+    First_Name_Input.classList.remove("red-border");
+    Last_Name_Input.classList.remove("red-border");
+    Username_Input.classList.remove("red-border");
+    Password_Input.classList.remove("red-border");
+    Re_Password_Input.classList.remove("red-border");
+
+
     let problemAmount = 0;
     let First_Name_Value = First_Name_Input.value;
     let Last_Name_Value = Last_Name_Input.value;
@@ -30,8 +37,28 @@ Sign_Up_Button.onclick = function() {
 
     if(First_Name_Value.length == 0 || Last_Name_Value.length == 0 || Username_Value.length == 0 || Password_Value.length == 0 || Re_Password_Value.length == 0) {
         let signupbuttondiv = document.getElementById("fill-all-box");
-        signupbuttondiv.classList.remove("hidden");
+        // signupbuttondiv.classList.remove("hidden");
         problemAmount += 1;
+
+        if(First_Name_Value.length == 0) {
+            First_Name_Input.classList.add("red-border");
+        }
+
+        if(Last_Name_Value.length == 0) {
+            Last_Name_Input.classList.add("red-border");
+        }
+
+        if(Username_Value.length == 0) {
+            Username_Input.classList.add("red-border");
+        }
+
+        if(Password_Value.length == 0) {
+            Password_Input.classList.add("red-border");
+        }
+
+        if(Re_Password_Value.length == 0) {
+            Re_Password_Input.classList.add("red-border");
+        }
     }
     else {
         let signupbuttondiv = document.getElementById("fill-all-box");
@@ -43,6 +70,10 @@ Sign_Up_Button.onclick = function() {
         password_dont_match.classList.remove("hidden");
         let re_password_dont_match = document.getElementById("re-password-problem-no-match");
         re_password_dont_match.classList.remove("hidden");
+
+        Password_Input.classList.add("red-border");
+        Re_Password_Input.classList.add("red-border");
+
         problemAmount += 1;
     }
     else {
