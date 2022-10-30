@@ -37,7 +37,7 @@ Sign_Up_Button.onclick = function() {
 
     if(First_Name_Value.length == 0 || Last_Name_Value.length == 0 || Username_Value.length == 0 || Password_Value.length == 0 || Re_Password_Value.length == 0) {
         let signupbuttondiv = document.getElementById("fill-all-box");
-        // signupbuttondiv.classList.remove("hidden");
+        signupbuttondiv.classList.remove("hidden");
         problemAmount += 1;
 
         if(First_Name_Value.length == 0) {
